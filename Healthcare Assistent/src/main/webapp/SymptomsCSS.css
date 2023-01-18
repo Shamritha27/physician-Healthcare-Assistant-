@@ -1,0 +1,105 @@
+@charset "ISO-8859-1";
+
+
+* {
+  box-sizing: border-box;
+  }
+body {
+    background-color: #947EB0;
+    justify-content: center;
+    display: flex;
+     }
+
+h2 { 
+    color: #000;
+    text-align: left;
+    font-family: cursive;
+    
+   }
+   
+.box {
+    background-color: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 1000px;
+     }
+form {
+	font-family: cursive;
+	padding-left:20px;
+    }
+[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  color: dodgerblue;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  outline: 0;
+  flex-grow: 0;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  transition: background 300ms;
+  cursor: pointer;
+}
+[type=checkbox]::before {
+  content: "";
+  color: transparent;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  box-shadow: inset 0 0 0 1px #947EB0;
+}
+
+[type=checkbox]:checked {
+  background-color: #947EB0;
+}
+
+[type=checkbox]:checked::before {
+  box-shadow: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
+}
+
+
+[type=checkbox]::-ms-check {
+  content: "";
+  color: transparent;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  box-shadow: inset 0 0 0 1px #CCD3D8;
+}
+.button {
+  display: inline-block;
+  padding: 6px 22px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #947EB0;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px #aaa;
+  font-family: cursive;
+}
+
+.button:hover {background-color: #ad92d1;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);}
+
+.button:active {
+  background-color: #ad92d1;
+  box-shadow: 0 5px #aaa;
+  transform: translateY(4px);
+}
+  

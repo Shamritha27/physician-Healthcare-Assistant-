@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="MainCSS.css">
+</head>
+<body>
+<div class="box">
+
+<img src="img2.png">
+<h2>PHYSICIAN HEALTH CARE ASSISTANT</h2>
+
+<form role="form">
+  <div class="form-group">
+    <input type="text" class="form-control empty" onfocus="this.value=''" name="q" id="myInput" placeholder="Search Condition">
+    <span onclick="myFunction()" class="btn"><i class="fas fa-search"></i></span>
+    
+    <p>Medical condition is a health problem with certain characteristics or symptoms. To medically confirm the condition as a disease or disorder of health a set of medical diagnosis has to be performed based on the symptoms. With a confirmed condition, the system should recommend a set of prescribed and non-prescribed medications.</p>
+  </div>
+</form>
+
+<ul id="myUL">
+
+  <li><a href="FeverOverview"><b>Fever - Symptoms and causes</b>A fever is usually caused by an infection.</a></li>
+  <li><a href="DengueOverview"><b>Dengue Fever - Symptoms and causes</b>Mild dengue fever causes a high fever and flu-like symptoms.</a></li>
+  <li><a href="RheumaticOverview"><b>Rheumatic fever - Symptoms and causes </b>Rheumatic fever is an inflammatory disease that can develop when strep throat or scarlet fever isn't properly treated.</a></li>
+  
+  <li><a href="CommonColdOverview"><b>Common cold - Symptoms and causes</b>Stay away from people with colds.</a></li>
+  <li><a href="ColdSoreOverview"><b>Cold sore - Symptoms and causes</b>Cold sore Cold sore Cold sores, often called fever blisters, are clustered, small, fluid-filled blisters.</a></li>
+  <li><a href="ColdBabiesOverview"><b>Common cold in babies - Symptoms and causes</b>Exposure to anyone with a cold can increase the risk of getting a cold.</a></li>
+  
+  <li><a href="CancerOverview"><b>Cancer - Symptoms and causes</b>Pain can be caused by cancer or by cancer treatment, though not all cancer is painful.</a></li>   
+  <li><a href="PancreaticCancerOverview"><b>Pancreatic cancer - Symptoms and causes</b>Pancreatic cancer Pancreatic cancer Pancreatic cancer is cancer that forms in the cells of the pancreas.</a></li>
+  <li><a href="EsophagealCancerOverview"><b>Esophageal cancer - Symptoms and causes</b>Esophageal cancer Esophageal cancer Esophageal cancer most often occurs in the cells that line the inside of the esophagus</a></li>
+	  
+  <li><a href="PediatricBrainTumorOverview"><b>Pediatric brain tumors - Symptoms and causes</b>Pediatric brain tumor Pediatric brain tumor This shows a child's tumor that likely began in the brain cells.</a></li>
+  <li><a href="SalivaryGlandTumorOverview"><b>Salivary gland tumors - Symptoms and causes</b>Treatment for salivary gland tumors is usually with surgery to remove the tumor.</a></li>
+  <li><a href="BrainTumorOverview"><b>Brain tumor - Symptoms and causes</b>What is a brain tumor?</a></li>
+  
+  <li><a href="GerdOverview"><b>Gastroesophageal reflux disease (GERD) - Symptoms and causes</b>Frequent or constant reflux can lead to GERD</a></li>
+</ul>
+</div>
+<script>
+document.querySelector(".btn").addEventListener("click", function() {
+	  document.querySelector("p").style.display="none";
+	})
+
+
+var nm = request.getParameter("q");
+
+if (nm != null) {
+response.setHeader(nm);
+}
+
+function myFunction() {
+	
+	
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase(); 
+    
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+	var x = document.getElementById("myUL");
+	
+    for (i = 0; i < li.length; i++) {
+    	a = li[i].getElementsByTagName("a")[0];
+    	a1 = li[i].getElementsByTagName("b")[0];
+    	txtValue = a1.textContent || a1.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "block";
+        } else {
+             li[i].style.display = "none";
+        }
+      }
+	}    
+</script>
+
+</body>
